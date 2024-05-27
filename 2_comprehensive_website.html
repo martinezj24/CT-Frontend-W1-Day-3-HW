@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="#" method="post">
+    <!-- Task 1: Creating a Selection Experience -->
+
+        <!-- Select Menu for Favorite Programming Language -->
+        <label for="language">Favorite Programming Language:</label>
+        <select id="language" name="language">
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="ruby">Ruby</option>
+        </select>
+        <br><br>
+
+        <!-- Radio Buttons for Level of Expertise -->
+        <fieldset>
+            <legend>Level of Expertise:</legend>
+            
+            <input type="radio" id="beginner" name="expertise" value="beginner">
+            <label for="beginner">Beginner</label><br>
+
+            <input type="radio" id="intermediate" name="expertise" value="intermediate">
+            <label for="intermediate">Intermediate</label><br>
+
+            <input type="radio" id="advanced" name="expertise" value="advanced">
+            <label for="advanced">Advanced</label>
+        </fieldset>
+        <br><br>
+
+        <!-- Checkboxes for Preferred Development Platforms -->
+        <fieldset>
+            <legend>Preferred Development Platforms:</legend>
+
+            <input type="checkbox" id="web" name="platform" value="web">
+            <label for="web">Web</label><br>
+
+            <input type="checkbox" id="mobile" name="platform" value="mobile">
+            <label for="mobile">Mobile</label><br>
+
+            <input type="checkbox" id="desktop" name="platform" value="desktop">
+            <label for="desktop">Desktop</label>
+        </fieldset>
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <!-- Task 2: Improving Accessibility -->
+    <!-- Additional ARIA attributes for enhanced accessibility -->
+    <script>
+        document.getElementById('email').setAttribute('aria-label', 'Email Address');
+        document.getElementById('quantity').setAttribute('aria-label', 'Quantity');
+        document.getElementById('date').setAttribute('aria-label', 'Select Date');
+        document.getElementById('rating').setAttribute('aria-label', 'Rating');
+        document.getElementById('color').setAttribute('aria-label', 'Choose a color');
+        document.getElementById('language').setAttribute('aria-label', 'Favorite Programming Language');
+        document.querySelectorAll('input[name="expertise"]').forEach(function(el) {
+            el.setAttribute('aria-label', 'Level of Expertise');
+        });
+        document.querySelectorAll('input[name="platform"]').forEach(function(el) {
+            el.setAttribute('aria-label', 'Preferred Development Platforms');
+        });
+    </script>
+</body>
+</html>
